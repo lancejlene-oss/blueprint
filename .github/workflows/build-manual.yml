@@ -1,0 +1,43 @@
+name: Build Blueprint Takeoff Manual
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/build-manual.yml'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/build-manual.yml'
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive texlive-latex-recommended texlive-fonts-recommended texlive-xetex
+
+      - name: Generate PDF manual
+        run: |
+          mkdir -p dist
+          pandoc docs/Blueprint-Takeoff-Manual.md \
+            -o dist/Blueprint-Takeoff-Training-Manual.pdf \
+            --from=markdown \
+            --pdf-engine=xelatex \
+            --toc
+
+      - name: Upload manual artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blueprint-takeoff-manual
+          path: dist/Blueprint-Takeoff-Training-Manual.pdf
+          
