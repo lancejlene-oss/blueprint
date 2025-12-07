@@ -110,12 +110,22 @@ def add_tips_box(ws, start_row, start_col, tips_list, manual_ref=""):
 
 def insert_diagram(ws, png_path, cell_ref, caption=""):
     """Insert a diagram image into the worksheet"""
-    if os.path.exists(png_path):
+    if not os.path.exists(png_path):
+        return  # Skip if image doesn't exist
+    
+    try:
         img = XLImage(png_path)
         # Resize to fit nicely (width ~300-400 pixels)
-        img.width = 350
-        img.height = int(img.height * (350 / img.width)) if img.width > 0 else img.height
+        if img.width > 0:
+            img.width = 350
+            img.height = int(img.height * (350 / img.width))
+        else:
+            # Invalid image, skip it
+            return
         ws.add_image(img, cell_ref)
+    except Exception as e:
+        print(f"  ⚠ Warning: Could not insert diagram {png_path}: {e}")
+        return
         
         # Add caption below if provided
         if caption:
@@ -133,8 +143,19 @@ def insert_diagram(ws, png_path, cell_ref, caption=""):
 
 print("🔧 Upgrading Excel Workbook to Field Takeoff Pack...")
 
-# Load the workbook
-wb = load_workbook(excel_path)
+# Load the workbook with error handling
+try:
+    if not os.path.exists(excel_path):
+        print(f"❌ Error: Excel file not found at {excel_path}")
+        print("   Run create_excel_template.py first to create the base workbook.")
+        sys.exit(1)
+    
+    wb = load_workbook(excel_path)
+    print(f"✓ Loaded workbook: {excel_path}")
+except Exception as e:
+    print(f"❌ Error loading Excel file: {e}")
+    print("   The file may be corrupted or open in another program.")
+    sys.exit(1)
 
 # Convert SVG diagrams to PNG
 diagrams = {
@@ -150,6 +171,12 @@ diagrams = {
 png_files = {}
 for key, svg_file in diagrams.items():
     svg_path = os.path.join(img_dir, svg_file)
+    
+    # Check if SVG file exists
+    if not os.path.exists(svg_path):
+        print(f"⚠ Warning: SVG file not found: {svg_path}")
+        continue
+    
     png_path = os.path.join(temp_dir, f'{key}.png')
     if convert_svg_to_png(svg_path, png_path):
         png_files[key] = png_path
@@ -689,10 +716,17 @@ for sheet_name in wb.sheetnames:
 
 print("\n💾 Saving upgraded workbook...")
 
-# Save the workbook
-wb.save(excel_path)
-
-print(f"✅ Excel workbook upgraded successfully!")
+# Save the workbook with error handling
+try:
+    wb.save(excel_path)
+    print(f"✅ Excel workbook upgraded successfully!")
+except PermissionError:
+    print(f"❌ Error: Could not save file - it may be open in Excel.")
+    print(f"   Close the file and try again.")
+    sys.exit(1)
+except Exception as e:
+    print(f"❌ Error saving workbook: {e}")
+    sys.exit(1)
 print(f"   Location: {excel_path}")
 print(f"\n📋 Summary of changes:")
 print(f"   • Added step-by-step instructions to all 8 sheets")
