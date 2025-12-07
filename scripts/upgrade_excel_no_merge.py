@@ -38,7 +38,7 @@ def convert_svg_to_png(svg_path, png_path, width=350):
             cairosvg.svg2png(url=svg_path, write_to=png_path, output_width=width)
             return True
         except ImportError:
-            print(f"Warning: Could not convert {svg_path}")
+            print(f"Warning: Could not convert {svg_path} - install librsvg2-bin or cairosvg")
             return False
 
 def insert_diagram(ws, png_path, cell_ref):
