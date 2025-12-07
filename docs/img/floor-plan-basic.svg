@@ -57,7 +57,7 @@
   <g id="door3">
     <line x1="560" y1="360" x2="560" y2="400" stroke="#000" stroke-width="1"/>
     <path d="M 560 360 L 600 360 A 40 40 0 0 0 560 400" fill="none" stroke="#000" stroke-width="1"/>
-    <circle cx="580" cy="340" r="12" fill="#fff" stroke="#000" stroke-wrap="1"/>
+    <circle cx="580" cy="340" r="12" fill="#fff" stroke="#000" stroke-width="1"/>
     <text x="580" y="344" font-family="Arial" font-size="10" text-anchor="middle">D3</text>
   </g>
   

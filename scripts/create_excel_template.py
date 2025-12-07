@@ -26,9 +26,14 @@ def create_blueprint_workbook():
     create_material_summary_sheet(wb)
     create_conversion_tables_sheet(wb)
     
-    # Save the workbook
-    wb.save('/home/runner/work/blueprint/blueprint/templates/worksheet.xlsx')
-    print("Excel workbook created successfully!")
+    # Save the workbook - use relative path for portability
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(script_dir)
+    output_path = os.path.join(repo_root, 'templates', 'worksheet.xlsx')
+    
+    wb.save(output_path)
+    print(f"Excel workbook created successfully at: {output_path}")
 
 def create_project_info_sheet(wb):
     """Create project information sheet"""
