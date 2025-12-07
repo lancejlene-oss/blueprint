@@ -36,7 +36,7 @@
     <line x1="100" y1="0" x2="100" y2="10" stroke="#000" stroke-width="1"/>
     <line x1="150" y1="0" x2="150" y2="10" stroke="#000" stroke-width="1"/>
     <line x1="200" y1="0" x2="200" y2="10" stroke="#000" stroke-width="1"/>
-    <text x="100" y="25" font-family="Arial" font-size="10" text-anchor="middle">SCALE: 1/4" = 1'-0"</text>
+    <text x="100" y="25" font-family="Arial" font-size="12" text-anchor="middle">SCALE: 1/4" = 1'-0"</text>
   </g>
   
   <!-- Title block -->
@@ -45,16 +45,16 @@
   <line x1="640" y1="540" x2="790" y2="540" stroke="#000" stroke-width="1"/>
   <line x1="640" y1="560" x2="790" y2="560" stroke="#000" stroke-width="1"/>
   <text x="715" y="498" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">FLOOR PLAN</text>
-  <text x="650" y="528" font-family="Arial" font-size="9">Scale: 1/4" = 1'-0"</text>
-  <text x="650" y="553" font-family="Arial" font-size="9">Date: 11/15/2025</text>
-  <text x="650" y="573" font-family="Arial" font-size="9">Sheet: A2.1</text>
-  <text x="650" y="583" font-family="Arial" font-size="9">Rev: R1</text>
+  <text x="650" y="528" font-family="Arial" font-size="11">Scale: 1/4" = 1'-0"</text>
+  <text x="650" y="553" font-family="Arial" font-size="11">Date: 11/15/2025</text>
+  <text x="650" y="573" font-family="Arial" font-size="11">Sheet: A2.1</text>
+  <text x="650" y="583" font-family="Arial" font-size="11">Rev: R1</text>
   
   <!-- Revision cloud -->
   <g transform="translate(550, 150)">
     <path d="M 0,0 Q 5,-5 10,0 Q 15,5 20,0 Q 25,-5 30,0 Q 35,5 40,0 L 40,40 Q 35,45 30,40 Q 25,35 20,40 Q 15,45 10,40 Q 5,35 0,40 Z" 
           fill="none" stroke="#f00" stroke-width="1.5" stroke-dasharray="2,2"/>
-    <text x="20" y="25" font-family="Arial" font-size="10" fill="#f00" text-anchor="middle">Δ1</text>
+    <text x="20" y="25" font-family="Arial" font-size="12" fill="#f00" text-anchor="middle">Δ1</text>
   </g>
   
   <!-- Legend box -->
@@ -63,19 +63,19 @@
     <text x="75" y="15" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">LEGEND</text>
     
     <line x1="10" y1="30" x2="40" y2="30" stroke="#000" stroke-width="3"/>
-    <text x="45" y="33" font-family="Arial" font-size="9">Exterior Wall</text>
+    <text x="45" y="33" font-family="Arial" font-size="11">Exterior Wall</text>
     
     <line x1="10" y1="45" x2="40" y2="45" stroke="#000" stroke-width="1.5"/>
-    <text x="45" y="48" font-family="Arial" font-size="9">Interior Wall</text>
+    <text x="45" y="48" font-family="Arial" font-size="11">Interior Wall</text>
     
     <rect x="10" y="55" width="20" height="8" fill="none" stroke="#000" stroke-width="1"/>
-    <text x="35" y="62" font-family="Arial" font-size="9">Window</text>
+    <text x="35" y="62" font-family="Arial" font-size="11">Window</text>
     
     <path d="M 10 75 L 10 85 A 10 10 0 0 0 20 75" fill="none" stroke="#000" stroke-width="1"/>
-    <text x="25" y="83" font-family="Arial" font-size="9">Door</text>
+    <text x="25" y="83" font-family="Arial" font-size="11">Door</text>
     
     <circle cx="15" cy="98" r="3" fill="none" stroke="#000" stroke-width="1"/>
-    <text x="25" y="101" font-family="Arial" font-size="9">Outlet</text>
+    <text x="25" y="101" font-family="Arial" font-size="11">Outlet</text>
   </g>
   
   <!-- Dimension strings -->
@@ -83,12 +83,12 @@
     <line x1="100" y1="50" x2="600" y2="50" stroke="#000" stroke-width="0.5"/>
     <line x1="100" y1="45" x2="100" y2="55" stroke="#000" stroke-width="0.5"/>
     <line x1="600" y1="45" x2="600" y2="55" stroke="#000" stroke-width="0.5"/>
-    <text x="350" y="45" font-family="Arial" font-size="10" text-anchor="middle">36'-0"</text>
+    <text x="350" y="45" font-family="Arial" font-size="12" text-anchor="middle">36'-0"</text>
     
     <line x1="630" y1="80" x2="630" y2="430" stroke="#000" stroke-width="0.5"/>
     <line x1="625" y1="80" x2="635" y2="80" stroke="#000" stroke-width="0.5"/>
     <line x1="625" y1="430" x2="635" y2="430" stroke="#000" stroke-width="0.5"/>
-    <text x="645" y="260" font-family="Arial" font-size="10" transform="rotate(90 645 260)" text-anchor="middle">24'-0"</text>
+    <text x="645" y="260" font-family="Arial" font-size="12" transform="rotate(90 645 260)" text-anchor="middle">24'-0"</text>
   </g>
   
   <!-- Labels -->
