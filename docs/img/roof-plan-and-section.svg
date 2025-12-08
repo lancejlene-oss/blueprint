@@ -114,9 +114,9 @@
     <line x1="0" y1="0" x2="120" y2="-60" stroke="#ff0000" stroke-width="2.5"/>
     
     <!-- Labels -->
-    <text x="60" y="15" font-family="Arial" font-size="11" text-anchor="middle">12" RUN</text>
-    <text x="135" y="-30" font-family="Arial" font-size="11">6" RISE</text>
-    <text x="60" y="-40" font-family="Arial" font-size="11" fill="#ff0000" transform="rotate(-26.57 60 -40)">Slope</text>
+    <text x="60" y="15" font-family="Arial" font-size="12" text-anchor="middle">12" RUN</text>
+    <text x="135" y="-30" font-family="Arial" font-size="12">6" RISE</text>
+    <text x="40" y="-55" font-family="Arial" font-size="12" font-weight="bold" fill="#ff0000">Slope</text>
     
     <!-- Right angle indicator -->
     <rect x="115" y="-5" width="5" height="5" fill="none" stroke="#000" stroke-width="1"/>
