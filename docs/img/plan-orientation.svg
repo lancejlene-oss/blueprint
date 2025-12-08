@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Main floor plan outline -->
+  <rect x="100" y="80" width="500" height="350" fill="none" stroke="#000" stroke-width="3"/>
+  <rect x="103" y="83" width="494" height="344" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Interior walls -->
+  <line x1="100" y1="250" x2="600" y2="250" stroke="#000" stroke-width="1.5"/>
+  <line x1="350" y1="80" x2="350" y2="430" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Door symbols -->
+  <path d="M 250 250 L 250 290 A 40 40 0 0 0 290 250" fill="none" stroke="#000" stroke-width="1"/>
+  <line x1="250" y1="250" x2="290" y2="250" stroke="#000" stroke-width="1"/>
+  
+  <!-- Window symbols -->
+  <rect x="200" y="77" width="60" height="6" fill="#fff" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="80" x2="240" y2="80" stroke="#000" stroke-width="2"/>
+  
+  <!-- North arrow -->
+  <g transform="translate(50, 50)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#000" stroke-width="1"/>
+    <polygon points="0,-15 -5,5 0,0 5,5" fill="#000"/>
+    <text x="0" y="30" font-family="Arial" font-size="12" text-anchor="middle">N</text>
+  </g>
+  
+  <!-- Scale bar -->
+  <g transform="translate(100, 460)">
+    <rect x="0" y="0" width="200" height="5" fill="#000"/>
+    <rect x="0" y="0" width="50" height="5" fill="#fff"/>
+    <rect x="100" y="0" width="50" height="5" fill="#fff"/>
+    <line x1="0" y1="0" x2="0" y2="10" stroke="#000" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="10" stroke="#000" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="10" stroke="#000" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="10" stroke="#000" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="10" stroke="#000" stroke-width="1"/>
+    <text x="100" y="25" font-family="Arial" font-size="12" text-anchor="middle">SCALE: 1/4" = 1'-0"</text>
+  </g>
+  
+  <!-- Title block -->
+  <rect x="640" y="480" width="150" height="110" fill="none" stroke="#000" stroke-width="2"/>
+  <line x1="640" y1="510" x2="790" y2="510" stroke="#000" stroke-width="1"/>
+  <line x1="640" y1="540" x2="790" y2="540" stroke="#000" stroke-width="1"/>
+  <line x1="640" y1="560" x2="790" y2="560" stroke="#000" stroke-width="1"/>
+  <text x="715" y="498" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">FLOOR PLAN</text>
+  <text x="650" y="528" font-family="Arial" font-size="11">Scale: 1/4" = 1'-0"</text>
+  <text x="650" y="553" font-family="Arial" font-size="11">Date: 11/15/2025</text>
+  <text x="650" y="573" font-family="Arial" font-size="11">Sheet: A2.1</text>
+  <text x="650" y="583" font-family="Arial" font-size="11">Rev: R1</text>
+  
+  <!-- Revision cloud -->
+  <g transform="translate(550, 150)">
+    <path d="M 0,0 Q 5,-5 10,0 Q 15,5 20,0 Q 25,-5 30,0 Q 35,5 40,0 L 40,40 Q 35,45 30,40 Q 25,35 20,40 Q 15,45 10,40 Q 5,35 0,40 Z" 
+          fill="none" stroke="#f00" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <text x="20" y="25" font-family="Arial" font-size="12" fill="#f00" text-anchor="middle">Δ1</text>
+  </g>
+  
+  <!-- Legend box -->
+  <g transform="translate(640, 100)">
+    <rect x="0" y="0" width="150" height="120" fill="none" stroke="#000" stroke-width="1"/>
+    <text x="75" y="15" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">LEGEND</text>
+    
+    <line x1="10" y1="30" x2="40" y2="30" stroke="#000" stroke-width="3"/>
+    <text x="45" y="33" font-family="Arial" font-size="11">Exterior Wall</text>
+    
+    <line x1="10" y1="45" x2="40" y2="45" stroke="#000" stroke-width="1.5"/>
+    <text x="45" y="48" font-family="Arial" font-size="11">Interior Wall</text>
+    
+    <rect x="10" y="55" width="20" height="8" fill="none" stroke="#000" stroke-width="1"/>
+    <text x="35" y="62" font-family="Arial" font-size="11">Window</text>
+    
+    <path d="M 10 75 L 10 85 A 10 10 0 0 0 20 75" fill="none" stroke="#000" stroke-width="1"/>
+    <text x="25" y="83" font-family="Arial" font-size="11">Door</text>
+    
+    <circle cx="15" cy="98" r="3" fill="none" stroke="#000" stroke-width="1"/>
+    <text x="25" y="101" font-family="Arial" font-size="11">Outlet</text>
+  </g>
+  
+  <!-- Dimension strings -->
+  <g>
+    <line x1="100" y1="50" x2="600" y2="50" stroke="#000" stroke-width="0.5"/>
+    <line x1="100" y1="45" x2="100" y2="55" stroke="#000" stroke-width="0.5"/>
+    <line x1="600" y1="45" x2="600" y2="55" stroke="#000" stroke-width="0.5"/>
+    <text x="350" y="45" font-family="Arial" font-size="12" text-anchor="middle">36'-0"</text>
+    
+    <line x1="630" y1="80" x2="630" y2="430" stroke="#000" stroke-width="0.5"/>
+    <line x1="625" y1="80" x2="635" y2="80" stroke="#000" stroke-width="0.5"/>
+    <line x1="625" y1="430" x2="635" y2="430" stroke="#000" stroke-width="0.5"/>
+    <text x="645" y="260" font-family="Arial" font-size="12" transform="rotate(90 645 260)" text-anchor="middle">24'-0"</text>
+  </g>
+  
+  <!-- Labels -->
+  <text x="200" y="150" font-family="Arial" font-size="12">LIVING ROOM</text>
+  <text x="450" y="150" font-family="Arial" font-size="12">BEDROOM</text>
+  <text x="200" y="350" font-family="Arial" font-size="12">KITCHEN</text>
+  <text x="450" y="350" font-family="Arial" font-size="12">BATH</text>
+</svg>
